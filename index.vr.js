@@ -27,7 +27,7 @@ export default class WelcomeToVR extends React.Component {
           </View> 
         </View>
 
-        <View style={{ flex: 1, flexDirection: 'column', width: 2, alignItems: 'stretch', transform: [{translate: [-1, 2, 5]}, {rotateY : -180} ], }}> 
+        <View billboarding={'on'} style={{ flex: 1, flexDirection: 'column', width: 2, alignItems: 'stretch', transform: [{translate: [-1, 2, 5]} ], }}> 
            <Heart />
         </View>
         
