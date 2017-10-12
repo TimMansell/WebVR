@@ -7,25 +7,30 @@ import {
   View,
 } from 'react-vr';
 
+import Heart from './heart';
+
 export default class WelcomeToVR extends React.Component {
   render() {
     return (
       <View>
         <Pano source={asset('chess-world.jpg')}/>
-        <Text
-          style={{
-            backgroundColor: '#777879',
-            fontSize: 0.8,
-            fontWeight: '400',
-            layoutOrigin: [0.5, 0.5],
-            paddingLeft: 0.2,
-            paddingRight: 0.2,
-            textAlign: 'center',
-            textAlignVertical: 'center',
-            transform: [{translate: [0, 0, -3]}],
-          }}>
-          hello
-        </Text>
+
+        <View style={{ flex: 1, flexDirection: 'column', width: 2, alignItems: 'stretch', transform: [{translate: [-1, 1, -5]}], }}> 
+          <View style={{ margin: 0.1, height: 0.3, transform: [{translate: [0, 0, 2]}], }}> 
+            <Text style={{fontSize: 0.5, textAlign: 'center'}}>Look</Text> 
+          </View> 
+          <View style={{ margin: 0.1, height: 0.3, transform: [{translate: [0, 0, 1]}], }}>  
+            <Text style={{fontSize: 0.5, textAlign: 'center'}}>Behind</Text> 
+          </View>
+          <View style={{ margin: 0.1, height: 0.3, transform: [{translate: [0, 0, -2]}], }}> 
+            <Text style={{fontSize: 0.5, textAlign: 'center'}}>You</Text> 
+          </View> 
+        </View>
+
+        <View style={{ flex: 1, flexDirection: 'column', width: 2, alignItems: 'stretch', transform: [{translate: [-1, 2, 5]}, {rotateY : -180} ], }}> 
+           <Heart />
+        </View>
+        
       </View>
     );
   }
